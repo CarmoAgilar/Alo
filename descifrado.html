@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descifrado AES</title>
+    <link rel="icon" href="img/icono.png">
+</head>
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js" ></script>
+    <div class="col-md-5 offset-md-3 card" style="margin-top: 4%;">
+        <center>
+            <h1>DESCIFRADO</h1>
+            <br>
+            <table style="margin: 0 auto;">
+                Seleccione el tipo de cifrado<br><select name="tipoAES" id="tipo">
+                    <option value="128">128</option>
+                    
+                    <option value="192">192</option>
+                    
+                    <option value="256">256</option>
+                    
+                </select>
+                <br>
+                <br>
+                <textarea class="form-control" id="txtcifrado" placeholder="Mensaje Cifrado"></textarea>
+                <br>
+                <input class="form-control" type="txt" placeholder="Clave" id="clave" >
+            <td>
+                <input class="btn btn-info" type="button" value="Descifrar" onclick="descifrar()">
+                <br>
+                <br>
+                <p><button class="btn btn-danger"><a href="index.html">Regresar</a></button></p>
+                <br>
+                <br>
+            </td>
+            <br>
+            <tr>
+                El texto descifrado es:<br>
+                <textarea class="form-control" id="txtdescifrado" placeholder="Texto Descifrado" disabled></textarea>
+            </tr>
+                
+                <br>
+                
+                <p id="txt"></p>
+                
+                <div id="resultado"></div>
+        </table>
+            
+        
+        </center>
+    </div>
+    <script src="js/aes.js"></script>
+</body>
+</html>
